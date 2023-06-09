@@ -2,12 +2,13 @@ package personal.model;
 
 import personal.model.mapper.Mapper;
 import personal.model.mapper.UserMapper;
+import personal.model.mapper.UserMapperSplitByElement;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryFile implements Repository {
-    private Mapper mapper = new UserMapper();
+    private Mapper mapper = new UserMapperSplitByElement();
     private FileOperation fileOperation;
 
     public RepositoryFile(FileOperation fileOperation) {
