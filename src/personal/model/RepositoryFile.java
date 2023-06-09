@@ -62,4 +62,12 @@ public class RepositoryFile implements Repository {
         fileOperation.saveAllLines(mapToString(users));
         return user;
     }
+
+    @Override
+    public User deleteUser(User user) {
+        List<User> users = getAllUsers();
+        users.remove(user);
+        fileOperation.saveAllLines(mapToString(users));
+        return user;
+    }
 }

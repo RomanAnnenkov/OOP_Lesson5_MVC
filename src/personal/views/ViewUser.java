@@ -37,11 +37,23 @@ public class ViewUser {
                     case UPDATE:
                         updateUser();
                         break;
+                    case DELETE:
+                        deleteUser();
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    private void deleteUser() throws Exception {
+        readList();
+        User user = getUser();
+        User deletedUser = userController.deleteUser(user);
+        System.out.println("<----Удалён----");
+        System.out.println(deletedUser);
+        System.out.println("----Удалён---->");
     }
 
     private void updateUser() throws Exception {
@@ -50,7 +62,9 @@ public class ViewUser {
         User updatedUser = getNewUser();
         updatedUser.setId(user.getId());
         User savedUser = userController.updateUser(updatedUser);
+        System.out.println("<----Обновлён----");
         System.out.println(savedUser);
+        System.out.println("----Обновлён---->");
     }
 
     private void readList() {
