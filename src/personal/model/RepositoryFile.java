@@ -1,5 +1,8 @@
 package personal.model;
 
+import personal.model.mapper.Mapper;
+import personal.model.mapper.UserMapper;
+
 import java.util.ArrayList;
 import java.util.List;
 

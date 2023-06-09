@@ -1,4 +1,6 @@
-package personal.model;
+package personal.model.mapper;
+
+import personal.model.User;
 
 public interface Mapper {
     String map(User user);
