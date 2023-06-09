@@ -3,7 +3,7 @@ package personal.model.mapper;
 import personal.model.User;
 
 public class UserMapperSplitByElement implements Mapper{
-    String separator;
+    private final String separator;
 
     public UserMapperSplitByElement() {
         this.separator = ",";
