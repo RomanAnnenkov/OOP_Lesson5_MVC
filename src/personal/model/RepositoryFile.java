@@ -8,11 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryFile implements Repository {
-    private Mapper mapper = new UserMapperSplitByElement();
+    private Mapper mapper;
     private FileOperation fileOperation;
 
-    public RepositoryFile(FileOperation fileOperation) {
+    public RepositoryFile(FileOperation fileOperation, Mapper mapper) {
         this.fileOperation = fileOperation;
+        this.mapper = mapper;
     }
 
     @Override
